@@ -1,0 +1,11 @@
+services:
+  sender:
+    build: .
+    cap_add: [NET_ADMIN]
+    volumes: ["../:/app"]
+    command: sleep infinity
+  receiver:
+    build: .
+    cap_add: [NET_ADMIN]
+    volumes: ["../:/app"]
+    command: sleep infinity

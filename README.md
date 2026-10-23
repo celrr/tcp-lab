@@ -13,3 +13,11 @@ y probado en una red con retardo y pérdidas simuladas (tc netem + Docker).
 
 ## Cómo reproducir
     cd netem && docker compose up -d --build
+
+## Medidas del enlace (netem)
+Ping entre los contenedores `sender` y `receiver` (WSL2 + Docker Compose).
+
+| Escenario | RTT medio | Pérdida |
+|---|---|---|
+| Sin netem | 0,087 ms | 0 % (20 pings) |
+| netem 100 ms / 5 % | 101,4 ms | 4 % (200 pings) |
